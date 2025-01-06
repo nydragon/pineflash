@@ -183,7 +183,6 @@ impl Flasher {
 
             #[cfg(target_os = "linux")]
             let command = Command::new("pkexec")
-                .env("PATH", "/usr/local/sbin:/usr/local/bin:/usr/bin:/bin:linux")
                 .arg(blisppath)
                 .arg("write")
                 .arg("-c")
